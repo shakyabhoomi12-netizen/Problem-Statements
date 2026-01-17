@@ -1,5 +1,4 @@
 Task 1: Predictive Core (Static Analysis)
-
 Objective
 
 To analyze historical stock price data and predict short-term future prices.
