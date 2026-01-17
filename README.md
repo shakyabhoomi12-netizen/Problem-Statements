@@ -1,30 +1,20 @@
 Task 1: Predictive Core (Static Analysis)
-Objective
 
+Objective
 To analyze historical stock price data and predict short-term future prices.
 
 Approach
-
 Stock selected: Apple Inc. (AAPL)
-
 Historical data (last 5 years) is fetched using yfinance
-
 Closing prices are used for modeling
-
 An ARIMA(1,1,1) model is trained on the data
-
 The next 7 business days are forecasted
-
 Forecasted values are visualized along with confidence intervals
 
 Output
-
 The output is a graph showing:
-
 Historical closing prices
-
 7-day price forecast
-
 Confidence interval representing prediction uncertainty
 
 Task 2: Analytical Chatbot (Contextual Explanation)
