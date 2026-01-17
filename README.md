@@ -1,4 +1,5 @@
 Task 1: Predictive Core (Static Analysis)
+
 Objective
 
 To analyze historical stock price data and predict short-term future prices.
@@ -28,6 +29,7 @@ Historical closing prices
 Confidence interval representing prediction uncertainty
 
 Task 2: Analytical Chatbot (Contextual Explanation)
+
 Objective
 
 To build a natural language chatbot that explains stock market movements using contextual information.
@@ -65,10 +67,15 @@ Install Dependencies
 pip install yfinance pandas matplotlib statsmodels
 
 Run Task 1
+
 cd PS1/Task1
+
 python task1.py
 
 Run Task 2
+
 cd PS1/Task2
+
 python task2.py
+
 Type exit to stop the chatbot.
