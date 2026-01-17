@@ -37,26 +37,21 @@ The chatbot generates an explanation using the retrieved context.
 RAG-Based Explanation:
 The chatbot follows a lightweight Retrieval-Augmented Generation (RAG) approach:
 
-Retrieval: Fetches recent financial news for the identified stock
+Retrieval: Fetches recent financial news for the identified stock.
 
-Generation: Produces an explanation based on the retrieved information
+Generation: Produces an explanation based on the retrieved information.
 
 If no major news is found, the system explains the movement using market sentiment, which reflects real-world trading behavior.
 
-How to Run
+How to Run:
 Install Dependencies,
 pip install yfinance pandas matplotlib statsmodels
 
 Run Task 1
-
 cd PS1/Task1
-
 python task1.py
 
 Run Task 2
-
 cd PS1/Task2
-
 python task2.py
-
 Type exit to stop the chatbot.
