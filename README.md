@@ -82,3 +82,99 @@ Conclusion:
 This task demonstrates a clean and interpretable predictive core for financial time-series forecasting.
 By combining historical trends, future projections, uncertainty bounds, and evaluation metrics into a single coherent pipeline, the solution fulfills all Task-1 requirements in a simple and explainable manner.
 
+
+
+Task-2:The Chatbot
+Financial Advisor (Natural Language “WHY” Engine)
+
+Overview:
+Task-2 focuses on building a natural language interface that helps users understand the context behind stock market movements.
+Instead of only showing numbers, the system:
+understands user questions in plain English
+identifies the relevant stock,
+analyzes recent price movement,
+retrieves related news,
+provides a simple explanation of market behavior.
+The solution is intentionally kept minimal, explainable, and robust.
+
+What the System Does
+
+Given a user query like:
+
+“Why did Apple stock drop?”
+
+“When did Microsoft go up?”
+
+“Explain Tesla movement”
+
+The system:
+Identifies the stock ticker from the query.
+Analyzes recent price trend (up / down / stable).
+Fetches recent news related to the stock.
+Explains the possible reason behind the movement.
+
+Data Sources:
+
+Stock Price Data: Yahoo Finance (via yfinance).
+
+News Data: Yahoo Finance news feed.
+
+No CSV files or stored datasets are used.
+All data is fetched live at runtime.
+
+Methodology
+
+Ticker Identification:
+Simple keyword-based mapping from company names to tickers.
+
+Trend Analysis:
+Uses the last 14 trading days to determine whether the stock moved up or down.
+
+News Context:
+Retrieves the most recent available news headline (with safe fallbacks).
+
+Explanation Engine:
+A rule-based explanation combines trend and news context to explain market behavior.
+
+This approach ensures:
+clarity,
+transparency,
+easy explainability.
+
+Example Interaction
+User: Why did Apple stock drop?
+System:
+Stock: AAPL
+Recent price trend: down
+Related news: [recent headline]
+The recent movement may be influenced by this news and overall market sentiment.
+
+Technologies Used
+Python,
+yfinance,
+pandas.
+
+How to Run
+
+Install dependencies:
+pip install yfinance pandas
+
+Run the script:
+
+python task2.py
+
+
+Ask questions in natural language.
+Type exit to quit.
+
+Notes on Output:
+Some stocks may show similar explanations if:
+recent price trends are similar,
+no distinct news headline is available.
+This behavior is data-driven and expected.
+
+
+Conclusion:
+This task demonstrates a lightweight and interpretable financial advisor system that bridges numerical stock data with contextual explanations.
+By combining natural language queries, recent price trends, and news context, the solution fulfills all Task-2 requirements while remaining simple and robust.
+
