@@ -1,4 +1,4 @@
-Capital Pulse – Task 1
+Task 1-The Predictive Core(Static Time Series)
 
 Predictive Core: Static Time-Series Forecasting
 
