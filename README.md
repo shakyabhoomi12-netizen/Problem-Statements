@@ -1,57 +1,84 @@
-Task 1: Predictive Core (Static Analysis)
+Capital Pulse – Task 1
 
-Objective:
-To analyze historical stock price data and predict short-term future prices.
+Predictive Core: Static Time-Series Forecasting
 
-Approach:
-Stock selected: Apple Inc. (AAPL).
-Historical data (last 5 years) is fetched using yfinance.
-Closing prices are used for modeling.
-An ARIMA(1,1,1) model is trained on the data.
-The next 7 business days are forecasted.
-Forecasted values are visualized along with confidence intervals.
+Overview:
+This task implements a simple, explainable time-series forecasting system for stock prices using historical market data.
+The goal is to forecast short-term price movement while explicitly modeling uncertainty, not just producing a single prediction line.
 
-Output:
-The output is a graph showing:
+The solution prioritizes:
 
-Historical closing prices.
-7-day price forecast.
-Confidence interval representing prediction uncertainty.
+clarity of logic
 
-Task 2: Analytical Chatbot (Contextual Explanation)
+correctness of methodology
 
-Objective:
-To build a natural language chatbot that explains stock market movements using contextual information.
+explainability over complexity
 
-Example Queries:
-Why did Apple stock drop?
-When did Microsoft go up?
-Explain Apple stock movement.
+Data Source
 
-How It Works:
-The user enters a natural language query.
-The system identifies the company name and maps it to a stock ticker.
-Relevant stock-related news is retrieved.
-The chatbot generates an explanation using the retrieved context.
+Source: Yahoo Finance (via yfinance)
 
-RAG-Based Explanation:
-The chatbot follows a lightweight Retrieval-Augmented Generation (RAG) approach:
+Stock Used: Apple Inc. (AAPL)
 
-Retrieval: Fetches recent financial news for the identified stock.
+Time Period: January 2021 – January 2026
 
-Generation: Produces an explanation based on the retrieved information.
+Frequency: Daily (business days)
 
-If no major news is found, the system explains the movement using market sentiment, which reflects real-world trading behavior.
+Feature Used: Closing Price
+
+No CSV files are stored. Data is fetched dynamically at runtime.
+
+Methodology:
+A classical ARIMA (1,1,1) model is used for time-series forecasting.
+
+The dataset is split into:
+80% training data,
+20% testing data (for evaluation),
+Model performance is evaluated on past unseen data.
+A 7-day future forecast is generated.
+Confidence intervals are included to represent uncertainty and volatility.
+This approach provides a clean and interpretable baseline suitable for financial forecasting tasks.
+
+Output (Single Consolidated Graph)
+
+The program produces one final graph that combines:
+Historical stock price trend.
+Forecasted prices for the next 7 days.
+Confidence interval (upper and lower bounds)
+All outputs are intentionally visualized in a single graph to avoid clutter and ensure interpretability.
+
+Evaluation Metric:
+Mean Absolute Error (MAE),
+Calculated on past unseen (test) data,
+Printed in the console after model execution.
+MAE measures the average prediction error and serves as a basic validation of the forecasting pipeline.
+
+Note on Warnings:
+During execution, some library-level warnings from statsmodels may appear related to date indexing and frequency.
+
+These warnings:
+Do not affect model correctness.
+Do not affect forecasts or plots.
+Are common when working with real-world financial time-series data.
+The forecasting logic and results remain valid.
+
+Technologies Used:
+Python,
+yfinance,
+pandas,
+matplotlib,
+statsmodels,
+scikit-learn.
 
 How to Run:
-Install Dependencies,
-pip install yfinance pandas matplotlib statsmodels
 
-Run Task 1
-cd PS1/Task1
-python task1.py
+Install dependencies:
+pip install yfinance pandas matplotlib statsmodels scikit-learn.
 
-Run Task 2
-cd PS1/Task2
-python task2.py
-Type exit to stop the chatbot.
+Run the script:
+cd PS1/Task1, and then python task1.py.
+
+Conclusion:
+This task demonstrates a clean and interpretable predictive core for financial time-series forecasting.
+By combining historical trends, future projections, uncertainty bounds, and evaluation metrics into a single coherent pipeline, the solution fulfills all Task-1 requirements in a simple and explainable manner.
+
