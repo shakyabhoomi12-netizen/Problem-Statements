@@ -160,9 +160,7 @@ Install dependencies:
 pip install yfinance pandas
 
 Run the script:
-
-python task2.py
-
+cd PS1/Task2 and then python task2.py
 
 Ask questions in natural language.
 Type exit to quit.
@@ -172,7 +170,6 @@ Some stocks may show similar explanations if:
 recent price trends are similar,
 no distinct news headline is available.
 This behavior is data-driven and expected.
-
 
 Conclusion:
 This task demonstrates a lightweight and interpretable financial advisor system that bridges numerical stock data with contextual explanations.
